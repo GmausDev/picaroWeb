@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picaro.dev</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Courier New', monospace;
+      background: #000;
+      color: #0f0;
+      overflow: hidden;
+    }
+
+    /* Binary Rain Background */
+    .rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0px,
+        rgba(0,255,0,0.1) 1px,
+        rgba(0,0,0,0) 2px
+      );
+      animation: rain-fall 0.5s infinite linear;
+      z-index: 0;
+    }
+    @keyframes rain-fall {
+      to { background-position: 0 100%; }
+    }
+
+    /* Glitch Text Effect */
+    .glitch {
+      position: relative;
+      font-size: 3rem;
+      color: #0f0;
+      animation: glitch 1s infinite;
+      }
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+    }
+    .glitch::before {
+      animation: glitch-top 1s infinite;
+      clip: rect(0, 900px, 0, 0);
+    }
+    .glitch::after {
+      animation: glitch-bottom 1s infinite;
+      clip: rect(0, 900px, 0, 0);
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 #f00, -2px 0 #0ff; }
+      20% { text-shadow: -2px 0 #f00, 2px 0 #0ff; }
+      40%,100% { text-shadow: 2px 0 #f00, -2px 0 #0ff; }
+    }
+    @keyframes glitch-top {
+      0% { clip: rect(0, 900px, 0, 0); transform: translate(2px, -2px); }
+      50% { clip: rect(0, 900px, 50px, 0); transform: translate(-2px, 2px); }
+      100% { clip: rect(0, 900px, 0, 0); transform: translate(2px, -2px); }
+    }
+    @keyframes glitch-bottom {
+      0% { clip: rect(0, 900px, 0, 0); transform: translate(-2px, 2px); }
+      50% { clip: rect(50px, 900px, 100px, 0); transform: translate(2px, -2px); }
+      100% { clip: rect(0, 900px, 0, 0); transform: translate(-2px, 2px); }
+    }
+   .glitchleft {
+      position: left;
+      font-size: 3rem;
+      color: #0f0;
+      animation: glitch 1s infinite;
+      }
+    .glitchleft::before,
+    .glitchleft::after {
+      content: attr(data-text);
+      position: right;
+      left: 0;
+    }
+    .glitchleft::before {
+      animation: glitch-top 1s infinite;
+      clip: rect(0, 900px, 0, 0);
+    }
+    .glitchleft::after {
+      animation: glitch-bottom 1s infinite;
+      clip: rect(0, 900px, 0, 0);
+    }
+    @keyframes glitchleft {
+      0% { text-shadow: 2px 0 #f00, -2px 0 #0ff; }
+      20% { text-shadow: -2px 0 #f00, 2px 0 #0ff; }
+      40%,100% { text-shadow: 2px 0 #f00, -2px 0 #0ff; }
+    }
+    @keyframes glitchleft-top {
+      0% { clip: rect(0, 900px, 0, 0); transform: translate(2px, -2px); }
+      50% { clip: rect(0, 900px, 50px, 0); transform: translate(-2px, 2px); }
+      100% { clip: rect(0, 900px, 0, 0); transform: translate(2px, -2px); }
+    }
+    @keyframes glitchleft-bottom {
+      0% { clip: rect(0, 900px, 0, 0); transform: translate(-2px, 2px); }
+      50% { clip: rect(50px, 900px, 100px, 0); transform: translate(2px, -2px); }
+      100% { clip: rect(0, 900px, 0, 0); transform: translate(-2px, 2px); }
+    }
+    /* Rotating Words Animation */
+    .changing-words {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: bottom;
+      height: 1em;
+      margin-left: 0.25em;
+    }
+    .changing-words span {
+      display: block;
+      animation: rotateWords 5s steps(5) infinite;
+    }
+    @keyframes rotateWords {
+      0% { transform: translateY(0); }
+      33% { transform: translateY(-1em); }
+      44% { transform: translateY(-2em); }
+      66% { transform: translateY(-2em); }
+      88% { transform: translateY(-3em); }
+      99% { transform: translateY(-6em); }
+      100% { transform: translateY(0); }
+    }
+    /* Navigation */
+    nav {
+      position: fixed; width: 100%; top: 0; z-index: 2;
+      display: flex; justify-content: space-between; padding: 1rem 2rem;
+      background: rgba(0,0,0,0.8);
+    }
+    .logo { font-size: 1.5rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: #0f0; text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      z-index: 1;
+      padding: 0 1rem;
+    }
+    .hero p { font-size: 1.2rem; margin: 1rem 0; }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #0f0;
+      text-decoration: none;
+      animation: glow 1.5s infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 5px #0f0; }
+      to { box-shadow: 0 0 20px #0f0; }
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      z-index: 1;
+      position: relative;
+    }
+    .feature h3 { margin-bottom: 0.5rem; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.8);
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .glitch { font-size: 2rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rain"></div>
+  <nav>
+    <div class="logo">PIC4R0.dev</div>
+    <ul>
+      <li><a href="#features">Blog</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+      <h1 class="glitch" data-text="WELCOME , let's LEARN">WELCOME , let's write about<span class="changing-words">
+      <span>DEVOPS</span>
+      <span>AI</span>
+      <span>DEV</span>
+      <span>INFRA</span>
+      <span>MATH</span>
+    
+      </h1>
+      <p>Step into this experiment.</p>
+    <a href="#features" class="btn">Working On</a>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>DevOps</h3>
+      <p>Explain the day a day problems and solutions.</p>
+    </div>
+    <div class="feature">
+      <h3>Cloud</h3>
+      <p>AWS is not that difficult🤣.</p>
+    </div>
+    <div class="feature">
+      <h3>AI & Dev</h3>
+      <p>How I can improve, to much noise to much news.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 GmausDev . All rights reserved.</p>
+  </footer>
+</body>
+</html>
