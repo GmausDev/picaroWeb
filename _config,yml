@@ -1,0 +1,6 @@
+# Configuración básica de Jekyll
+title: "Picaro.dev"
+baseurl: ""          # vacío para usuario.github.io
+description: "Landing neon-hacky con blog en Jekyll"
+url: "https://picaro.dev"
+markdown: kramdown

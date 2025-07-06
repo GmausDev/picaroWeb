@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Picaro.dev</title>
-  <style>
     /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -183,47 +176,3 @@
       .glitch { font-size: 2rem; }
       nav ul { display: none; }
     }
-  </style>
-</head>
-<body>
-  <div class="rain"></div>
-  <nav>
-    <div class="logo">PIC4R0.dev</div>
-    <ul>
-      <li><a href="#features">Blog</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-      <h1 class="glitch" data-text="WELCOME , let's LEARN">WELCOME , let's write about<span class="changing-words">
-      <span>DEVOPS</span>
-      <span>AI</span>
-      <span>DEV</span>
-      <span>INFRA</span>
-      <span>MATH</span>
-    
-      </h1>
-      <p>Step into this experiment.</p>
-    <a href="#features" class="btn">Working On</a>
-  </section>
-
-  <section id="features" class="features">
-    <div class="feature">
-      <h3>DevOps</h3>
-      <p>Explain the day a day problems and solutions.</p>
-    </div>
-    <div class="feature">
-      <h3>Cloud</h3>
-      <p>AWS is not that difficult🤣.</p>
-    </div>
-    <div class="feature">
-      <h3>AI & Dev</h3>
-      <p>How I can improve, to much noise to much news.</p>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <p>&copy; 2025 GmausDev . All rights reserved.</p>
-  </footer>
-</body>
-</html>
