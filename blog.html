@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+---
+<section class="blog-section">
+    <h1 class="glitch" data-text="BLOG">BLOG</h1>
+    <p class="blog-subtitle">// all transmissions</p>
+
+    <div class="post-list">
+        {% for post in site.posts %}
+        <article class="post-card">
+            <a href="{{ post.url | relative_url }}">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B, %Y" }}</time>
+                <h2>{{ post.title }}</h2>
+                {% if post.excerpt %}
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+                <span class="read-more">&gt; read_more_</span>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+
+    {% if site.posts.size == 0 %}
+    <p class="no-posts">// no transmissions found</p>
+    {% endif %}
+</section>

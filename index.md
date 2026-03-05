@@ -12,9 +12,9 @@ title: Inicio
     </h1>
     <p>Últimos artículos:</p>
     <ul>
-        {% for post in site.posts %}
-        <li><a href="{{'/_posts/test-post.md'   | relative_url }}">{{ post.title }}</a> – {{ post.date | date: "%-d %B, %Y" }}</li>
+        {% for post in site.posts limit:3 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> – {{ post.date | date: "%-d %B, %Y" }}</li>
         {% endfor %}
     </ul>
-<a href="#features" class="btn">Working On</a>
+<a href="{{ '/blog' | relative_url }}" class="btn">Blog</a>
 </section>
