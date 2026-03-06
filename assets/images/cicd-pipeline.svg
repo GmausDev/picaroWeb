@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'Courier New', monospace">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0ff;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="320" fill="#000" rx="8"/>
+
+  <text x="400" y="35" fill="#0f0" font-size="18" font-weight="bold" text-anchor="middle" filter="url(#glow)">CI/CD PIPELINE</text>
+  <line x1="250" y1="45" x2="550" y2="45" stroke="#0f0" stroke-width="1" opacity="0.5"/>
+
+  <!-- Developer -->
+  <rect x="30" y="75" width="130" height="55" rx="6" fill="none" stroke="#0f0" stroke-width="2" filter="url(#glow)"/>
+  <text x="95" y="98" fill="#0f0" font-size="11" text-anchor="middle" font-weight="bold">DEVELOPER</text>
+  <text x="95" y="115" fill="#0a0" font-size="9" text-anchor="middle">writes code</text>
+
+  <line x1="160" y1="102" x2="205" y2="102" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="205,97 215,102 205,107" fill="#0ff"/>
+
+  <!-- Code Push -->
+  <rect x="215" y="75" width="130" height="55" rx="6" fill="none" stroke="#0ff" stroke-width="2" filter="url(#glow)"/>
+  <text x="280" y="98" fill="#0ff" font-size="11" text-anchor="middle" font-weight="bold">CODE PUSH</text>
+  <text x="280" y="115" fill="#088" font-size="9" text-anchor="middle">git push origin</text>
+
+  <line x1="345" y1="102" x2="390" y2="102" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="390,97 400,102 390,107" fill="#0ff"/>
+
+  <!-- Build -->
+  <rect x="400" y="75" width="130" height="55" rx="6" fill="none" stroke="#0f0" stroke-width="2" filter="url(#glow)"/>
+  <text x="465" y="98" fill="#0f0" font-size="11" text-anchor="middle" font-weight="bold">BUILD</text>
+  <text x="465" y="115" fill="#0a0" font-size="9" text-anchor="middle">compile &amp; bundle</text>
+
+  <line x1="465" y1="130" x2="465" y2="165" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="460,165 465,175 470,165" fill="#0ff"/>
+
+  <!-- Test -->
+  <rect x="400" y="175" width="130" height="55" rx="6" fill="none" stroke="#ff0" stroke-width="2" filter="url(#glow)"/>
+  <text x="465" y="198" fill="#ff0" font-size="11" text-anchor="middle" font-weight="bold">TEST</text>
+  <text x="465" y="215" fill="#aa0" font-size="9" text-anchor="middle">unit + integration</text>
+
+  <line x1="530" y1="202" x2="575" y2="202" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="575,197 585,202 575,207" fill="#0ff"/>
+
+  <!-- Staging -->
+  <rect x="585" y="175" width="130" height="55" rx="6" fill="none" stroke="#f80" stroke-width="2" filter="url(#glow)"/>
+  <text x="650" y="198" fill="#f80" font-size="11" text-anchor="middle" font-weight="bold">STAGING</text>
+  <text x="650" y="215" fill="#a60" font-size="9" text-anchor="middle">deploy &amp; verify</text>
+
+  <line x1="650" y1="230" x2="650" y2="250" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="645,250 650,260 655,250" fill="#0ff"/>
+
+  <!-- Production -->
+  <rect x="585" y="260" width="130" height="45" rx="6" fill="none" stroke="#f00" stroke-width="2" filter="url(#glow)"/>
+  <rect x="585" y="260" width="130" height="45" rx="6" fill="rgba(255,0,0,0.08)"/>
+  <text x="650" y="280" fill="#f00" font-size="11" text-anchor="middle" font-weight="bold">PRODUCTION</text>
+  <text x="650" y="293" fill="#a00" font-size="9" text-anchor="middle">live release</text>
+
+  <!-- Status indicators -->
+  <circle cx="55" cy="280" r="5" fill="#0f0" filter="url(#glow)"/>
+  <text x="68" y="284" fill="#0a0" font-size="9">pass</text>
+  <circle cx="120" cy="280" r="5" fill="#ff0" filter="url(#glow)"/>
+  <text x="133" y="284" fill="#aa0" font-size="9">warn</text>
+  <circle cx="185" cy="280" r="5" fill="#f00" filter="url(#glow)"/>
+  <text x="198" y="284" fill="#a00" font-size="9">fail</text>
+
+  <!-- Feedback loop -->
+  <path d="M 400,202 L 280,202 L 280,145 L 400,145" fill="none" stroke="#0a0" stroke-width="1" stroke-dasharray="5,3" opacity="0.6"/>
+  <polygon points="395,142 400,145 395,148" fill="#0a0" opacity="0.6"/>
+  <text x="310" y="167" fill="#0a0" font-size="8" opacity="0.6">feedback loop</text>
+</svg>

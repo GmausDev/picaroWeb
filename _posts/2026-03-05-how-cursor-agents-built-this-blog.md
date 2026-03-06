@@ -1,6 +1,6 @@
 ---
 title: "How a Cursor Agent Built This Blog"
-date: 2025-07-15 10:00:00 +0200
+date: 2026-03-05 14:00:00 +0100
 layout: post
 ---
 
@@ -17,6 +17,8 @@ Cursor agents are AI-powered coding assistants that run inside [Cursor](https://
 - **Commit and push** changes to Git
 
 Unlike traditional AI chat assistants that only suggest code, Cursor agents **execute** — they install dependencies, start servers, debug errors, and iterate until the job is done.
+
+![Cursor Agent Workflow](/assets/images/cursor-agent-workflow.svg)
 
 ## How This Blog Section Was Created
 
@@ -37,7 +39,7 @@ jekyll serve --host 0.0.0.0 --port 4000
 The original post file `test-post.md` did not follow Jekyll's required `YYYY-MM-DD-title.md` naming convention, so it was invisible to the blog engine. The agent renamed it:
 
 ```
-_posts/test-post.md → _posts/2025-07-03-test-jekyll.md
+_posts/test-post.md → _posts/2026-03-05-test-jekyll.md
 ```
 
 The homepage also had hardcoded post links instead of using Jekyll's `post.url`. The agent fixed these to use proper Liquid template tags.
