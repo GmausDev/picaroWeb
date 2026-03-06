@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Courier New', monospace">
+  <defs>
+    <filter id="g3">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#000" rx="8"/>
+
+  <text x="400" y="32" fill="#0f0" font-size="16" font-weight="bold" text-anchor="middle" filter="url(#g3)">GETTING STARTED IN 5 STEPS</text>
+  <line x1="220" y1="42" x2="580" y2="42" stroke="#0f0" stroke-width="1" opacity="0.4"/>
+
+  <!-- Step 1 -->
+  <rect x="50" y="65" width="700" height="65" rx="8" fill="none" stroke="#0f0" stroke-width="2" filter="url(#g3)"/>
+  <rect x="50" y="65" width="700" height="65" rx="8" fill="rgba(0,255,0,0.04)"/>
+  <circle cx="90" cy="97" r="16" fill="none" stroke="#0f0" stroke-width="2"/>
+  <text x="90" y="102" fill="#0f0" font-size="14" text-anchor="middle" font-weight="bold">1</text>
+  <text x="120" y="90" fill="#0f0" font-size="13" font-weight="bold">INSTALL CURSOR</text>
+  <text x="120" y="110" fill="#0a0" font-size="9">Download from cursor.com - available for macOS, Windows, and Linux</text>
+  <text x="120" y="122" fill="#060" font-size="8">It replaces or works alongside VS Code with the same extensions and settings</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="130" x2="400" y2="145" stroke="#0f0" stroke-width="1.5"/>
+  <polygon points="396,145 400,153 404,145" fill="#0f0"/>
+
+  <!-- Step 2 -->
+  <rect x="50" y="155" width="700" height="65" rx="8" fill="none" stroke="#0ff" stroke-width="2" filter="url(#g3)"/>
+  <rect x="50" y="155" width="700" height="65" rx="8" fill="rgba(0,255,255,0.04)"/>
+  <circle cx="90" cy="187" r="16" fill="none" stroke="#0ff" stroke-width="2"/>
+  <text x="90" y="192" fill="#0ff" font-size="14" text-anchor="middle" font-weight="bold">2</text>
+  <text x="120" y="180" fill="#0ff" font-size="13" font-weight="bold">OPEN YOUR PROJECT</text>
+  <text x="120" y="200" fill="#088" font-size="9">Open any Git repository in Cursor - it reads your entire codebase for context</text>
+  <text x="120" y="212" fill="#055" font-size="8">The agent understands your project structure, frameworks, and coding style</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="220" x2="400" y2="235" stroke="#0ff" stroke-width="1.5"/>
+  <polygon points="396,235 400,243 404,235" fill="#0ff"/>
+
+  <!-- Step 3 -->
+  <rect x="50" y="245" width="700" height="65" rx="8" fill="none" stroke="#ff0" stroke-width="2" filter="url(#g3)"/>
+  <rect x="50" y="245" width="700" height="65" rx="8" fill="rgba(255,255,0,0.04)"/>
+  <circle cx="90" cy="277" r="16" fill="none" stroke="#ff0" stroke-width="2"/>
+  <text x="90" y="282" fill="#ff0" font-size="14" text-anchor="middle" font-weight="bold">3</text>
+  <text x="120" y="270" fill="#ff0" font-size="13" font-weight="bold">OPEN AGENT PANEL</text>
+  <text x="120" y="290" fill="#aa0" font-size="9">Press Cmd+Shift+I (Mac) or Ctrl+Shift+I (Windows/Linux) to open the Agent panel</text>
+  <text x="120" y="302" fill="#770" font-size="8">Or click the Agent icon in the sidebar - make sure you select "Agent" mode, not "Chat"</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="310" x2="400" y2="325" stroke="#ff0" stroke-width="1.5"/>
+  <polygon points="396,325 400,333 404,325" fill="#ff0"/>
+
+  <!-- Step 4 -->
+  <rect x="50" y="335" width="700" height="65" rx="8" fill="none" stroke="#f80" stroke-width="2" filter="url(#g3)"/>
+  <rect x="50" y="335" width="700" height="65" rx="8" fill="rgba(255,136,0,0.04)"/>
+  <circle cx="90" cy="367" r="16" fill="none" stroke="#f80" stroke-width="2"/>
+  <text x="90" y="372" fill="#f80" font-size="14" text-anchor="middle" font-weight="bold">4</text>
+  <text x="120" y="360" fill="#f80" font-size="13" font-weight="bold">DESCRIBE YOUR TASK</text>
+  <text x="120" y="380" fill="#a60" font-size="9">Write what you want in plain language: "Add a login page" or "Fix the failing test"</text>
+  <text x="120" y="392" fill="#740" font-size="8">Be specific about what you want - the more detail, the better the result</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="400" x2="400" y2="415" stroke="#f80" stroke-width="1.5"/>
+  <polygon points="396,415 400,423 404,415" fill="#f80"/>
+
+  <!-- Step 5 -->
+  <rect x="50" y="425" width="700" height="60" rx="8" fill="none" stroke="#f0f" stroke-width="2" filter="url(#g3)"/>
+  <rect x="50" y="425" width="700" height="60" rx="8" fill="rgba(255,0,255,0.04)"/>
+  <circle cx="90" cy="455" r="16" fill="none" stroke="#f0f" stroke-width="2"/>
+  <text x="90" y="460" fill="#f0f" font-size="14" text-anchor="middle" font-weight="bold">5</text>
+  <text x="120" y="448" fill="#f0f" font-size="13" font-weight="bold">REVIEW AND SHIP</text>
+  <text x="120" y="468" fill="#a0a" font-size="9">The agent works autonomously. When done, review the changes and merge the PR</text>
+  <text x="120" y="480" fill="#707" font-size="8">You stay in control - accept, reject, or ask the agent to iterate further</text>
+</svg>

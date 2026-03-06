@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="'Courier New', monospace">
+  <defs>
+    <filter id="g4">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="380" fill="#000" rx="8"/>
+
+  <text x="400" y="32" fill="#0f0" font-size="16" font-weight="bold" text-anchor="middle" filter="url(#g4)">WRITING GOOD PROMPTS</text>
+  <line x1="230" y1="42" x2="570" y2="42" stroke="#0f0" stroke-width="1" opacity="0.4"/>
+
+  <!-- BAD column -->
+  <rect x="30" y="55" width="365" height="310" rx="8" fill="none" stroke="#f00" stroke-width="1.5"/>
+  <text x="212" y="78" fill="#f00" font-size="13" text-anchor="middle" font-weight="bold">BAD PROMPTS</text>
+
+  <rect x="50" y="92" width="325" height="35" rx="4" fill="rgba(255,0,0,0.08)" stroke="#600" stroke-width="1"/>
+  <text x="60" y="114" fill="#f66" font-size="9">"fix my code"</text>
+
+  <rect x="50" y="137" width="325" height="35" rx="4" fill="rgba(255,0,0,0.08)" stroke="#600" stroke-width="1"/>
+  <text x="60" y="159" fill="#f66" font-size="9">"make it better"</text>
+
+  <rect x="50" y="182" width="325" height="35" rx="4" fill="rgba(255,0,0,0.08)" stroke="#600" stroke-width="1"/>
+  <text x="60" y="204" fill="#f66" font-size="9">"add a feature"</text>
+
+  <rect x="50" y="227" width="325" height="35" rx="4" fill="rgba(255,0,0,0.08)" stroke="#600" stroke-width="1"/>
+  <text x="60" y="249" fill="#f66" font-size="9">"why doesn't it work?"</text>
+
+  <text x="212" y="290" fill="#a00" font-size="9" text-anchor="middle">Too vague - agent cannot infer intent.</text>
+  <text x="212" y="305" fill="#a00" font-size="9" text-anchor="middle">No context about what, where, or why.</text>
+  <text x="212" y="335" fill="#f00" font-size="20" text-anchor="middle">X</text>
+
+  <!-- GOOD column -->
+  <rect x="405" y="55" width="365" height="310" rx="8" fill="none" stroke="#0f0" stroke-width="1.5"/>
+  <text x="587" y="78" fill="#0f0" font-size="13" text-anchor="middle" font-weight="bold">GOOD PROMPTS</text>
+
+  <rect x="425" y="92" width="325" height="35" rx="4" fill="rgba(0,255,0,0.06)" stroke="#060" stroke-width="1"/>
+  <text x="435" y="114" fill="#0f0" font-size="9">"Add a /login page with email+password form"</text>
+
+  <rect x="425" y="137" width="325" height="35" rx="4" fill="rgba(0,255,0,0.06)" stroke="#060" stroke-width="1"/>
+  <text x="435" y="159" fill="#0f0" font-size="9">"Refactor UserService to use async/await"</text>
+
+  <rect x="425" y="182" width="325" height="35" rx="4" fill="rgba(0,255,0,0.06)" stroke="#060" stroke-width="1"/>
+  <text x="435" y="204" fill="#0f0" font-size="9">"Add pagination to the /api/posts endpoint"</text>
+
+  <rect x="425" y="227" width="325" height="35" rx="4" fill="rgba(0,255,0,0.06)" stroke="#060" stroke-width="1"/>
+  <text x="435" y="249" fill="#0f0" font-size="9">"Fix the 500 error when submitting empty form"</text>
+
+  <text x="587" y="290" fill="#0a0" font-size="9" text-anchor="middle">Specific, actionable, contextual.</text>
+  <text x="587" y="305" fill="#0a0" font-size="9" text-anchor="middle">Agent knows exactly what to do.</text>
+  <text x="587" y="340" fill="#0f0" font-size="22" text-anchor="middle">&#x2713;</text>
+</svg>

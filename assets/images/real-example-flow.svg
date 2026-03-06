@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'Courier New', monospace">
+  <defs>
+    <filter id="g5">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" fill="#000" rx="8"/>
+
+  <text x="400" y="32" fill="#0f0" font-size="15" font-weight="bold" text-anchor="middle" filter="url(#g5)">REAL EXAMPLE: "Add a blog section to my site"</text>
+  <line x1="160" y1="42" x2="640" y2="42" stroke="#0f0" stroke-width="1" opacity="0.4"/>
+
+  <!-- Timeline line -->
+  <line x1="80" y1="70" x2="80" y2="490" stroke="#0a0" stroke-width="2" opacity="0.5"/>
+
+  <!-- Step 1 -->
+  <circle cx="80" cy="80" r="8" fill="#0f0" filter="url(#g5)"/>
+  <text x="100" y="76" fill="#0a0" font-size="8">00:00</text>
+  <rect x="100" y="63" width="670" height="48" rx="6" fill="none" stroke="#0f0" stroke-width="1.5"/>
+  <text x="115" y="82" fill="#0f0" font-size="11" font-weight="bold">Agent reads codebase</text>
+  <text x="115" y="100" fill="#0a0" font-size="9">Scans all files, identifies Jekyll site, finds missing Gemfile, broken post naming</text>
+
+  <!-- Step 2 -->
+  <circle cx="80" cy="135" r="8" fill="#0ff" filter="url(#g5)"/>
+  <text x="100" y="131" fill="#088" font-size="8">00:15</text>
+  <rect x="100" y="118" width="670" height="48" rx="6" fill="none" stroke="#0ff" stroke-width="1.5"/>
+  <text x="115" y="137" fill="#0ff" font-size="11" font-weight="bold">Agent installs dependencies</text>
+  <text x="115" y="155" fill="#088" font-size="9">Runs: apt-get install ruby, gem install jekyll bundler, starts dev server</text>
+
+  <!-- Step 3 -->
+  <circle cx="80" cy="190" r="8" fill="#ff0" filter="url(#g5)"/>
+  <text x="100" y="186" fill="#aa0" font-size="8">01:00</text>
+  <rect x="100" y="173" width="670" height="48" rx="6" fill="none" stroke="#ff0" stroke-width="1.5"/>
+  <text x="115" y="192" fill="#ff0" font-size="11" font-weight="bold">Agent fixes existing bugs</text>
+  <text x="115" y="210" fill="#aa0" font-size="9">Renames test-post.md to 2026-03-05-test-jekyll.md, fixes hardcoded URLs in templates</text>
+
+  <!-- Step 4 -->
+  <circle cx="80" cy="245" r="8" fill="#f80" filter="url(#g5)"/>
+  <text x="100" y="241" fill="#a60" font-size="8">02:00</text>
+  <rect x="100" y="228" width="670" height="48" rx="6" fill="none" stroke="#f80" stroke-width="1.5"/>
+  <text x="115" y="247" fill="#f80" font-size="11" font-weight="bold">Agent creates blog.html + CSS</text>
+  <text x="115" y="265" fill="#a60" font-size="9">Builds listing page with post cards, glowing borders, excerpts. Adds Blog to nav bar</text>
+
+  <!-- Step 5 -->
+  <circle cx="80" cy="300" r="8" fill="#f0f" filter="url(#g5)"/>
+  <text x="100" y="296" fill="#a0a" font-size="8">03:00</text>
+  <rect x="100" y="283" width="670" height="48" rx="6" fill="none" stroke="#f0f" stroke-width="1.5"/>
+  <text x="115" y="302" fill="#f0f" font-size="11" font-weight="bold">Agent writes sample posts</text>
+  <text x="115" y="320" fill="#a0a" font-size="9">Creates 2 markdown posts with front matter, code blocks, and proper Jekyll conventions</text>
+
+  <!-- Step 6 -->
+  <circle cx="80" cy="355" r="8" fill="#0f0" filter="url(#g5)"/>
+  <text x="100" y="351" fill="#0a0" font-size="8">04:00</text>
+  <rect x="100" y="338" width="670" height="48" rx="6" fill="none" stroke="#0f0" stroke-width="1.5"/>
+  <text x="115" y="357" fill="#0f0" font-size="11" font-weight="bold">Agent opens browser and tests</text>
+  <text x="115" y="375" fill="#0a0" font-size="9">Navigates to localhost:4000, clicks through every page, records a demo video</text>
+
+  <!-- Step 7 -->
+  <circle cx="80" cy="410" r="8" fill="#0ff" filter="url(#g5)"/>
+  <text x="100" y="406" fill="#088" font-size="8">05:00</text>
+  <rect x="100" y="393" width="670" height="48" rx="6" fill="none" stroke="#0ff" stroke-width="1.5"/>
+  <text x="115" y="412" fill="#0ff" font-size="11" font-weight="bold">Agent commits and pushes</text>
+  <text x="115" y="430" fill="#088" font-size="9">git add, git commit with descriptive message, git push to remote branch</text>
+
+  <!-- Step 8 -->
+  <circle cx="80" cy="465" r="8" fill="#ff0" filter="url(#g5)"/>
+  <text x="100" y="461" fill="#aa0" font-size="8">06:00</text>
+  <rect x="100" y="448" width="670" height="48" rx="6" fill="none" stroke="#ff0" stroke-width="1.5"/>
+  <text x="115" y="467" fill="#ff0" font-size="11" font-weight="bold">Done - ready for review</text>
+  <text x="115" y="485" fill="#aa0" font-size="9">Full blog section built, tested, and deployed in under 10 minutes. Zero human coding.</text>
+</svg>

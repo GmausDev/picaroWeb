@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Courier New', monospace">
+  <defs>
+    <filter id="g">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="420" fill="#000" rx="8"/>
+
+  <text x="400" y="32" fill="#0f0" font-size="16" font-weight="bold" text-anchor="middle" filter="url(#g)">CURSOR AGENT ARCHITECTURE</text>
+  <line x1="200" y1="42" x2="600" y2="42" stroke="#0f0" stroke-width="1" opacity="0.4"/>
+
+  <!-- YOU (left) -->
+  <rect x="30" y="160" width="120" height="70" rx="8" fill="none" stroke="#0f0" stroke-width="2" filter="url(#g)"/>
+  <rect x="30" y="160" width="120" height="70" rx="8" fill="rgba(0,255,0,0.06)"/>
+  <text x="90" y="190" fill="#0f0" font-size="14" text-anchor="middle" font-weight="bold">YOU</text>
+  <text x="90" y="210" fill="#0a0" font-size="9" text-anchor="middle">write a prompt</text>
+
+  <!-- Arrow YOU to CURSOR -->
+  <line x1="150" y1="195" x2="195" y2="195" stroke="#0f0" stroke-width="2"/>
+  <polygon points="195,190 205,195 195,200" fill="#0f0"/>
+  <text x="178" y="187" fill="#0a0" font-size="7">task</text>
+
+  <!-- CURSOR EDITOR (center) -->
+  <rect x="205" y="120" width="190" height="150" rx="10" fill="none" stroke="#0ff" stroke-width="2" filter="url(#g)"/>
+  <rect x="205" y="120" width="190" height="150" rx="10" fill="rgba(0,255,255,0.04)"/>
+  <text x="300" y="148" fill="#0ff" font-size="13" text-anchor="middle" font-weight="bold">CURSOR EDITOR</text>
+  <line x1="220" y1="155" x2="380" y2="155" stroke="#0ff" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- AI Agent inside Cursor -->
+  <rect x="225" y="165" width="150" height="45" rx="6" fill="none" stroke="#f0f" stroke-width="1.5"/>
+  <rect x="225" y="165" width="150" height="45" rx="6" fill="rgba(255,0,255,0.06)"/>
+  <text x="300" y="185" fill="#f0f" font-size="11" text-anchor="middle" font-weight="bold">AI AGENT</text>
+  <text x="300" y="200" fill="#a0a" font-size="8" text-anchor="middle">thinks + plans + acts</text>
+
+  <!-- Context inside Cursor -->
+  <rect x="225" y="220" width="150" height="35" rx="6" fill="none" stroke="#088" stroke-width="1"/>
+  <text x="300" y="242" fill="#088" font-size="9" text-anchor="middle">codebase context + memory</text>
+
+  <!-- Arrow CURSOR to TOOLS -->
+  <line x1="395" y1="195" x2="440" y2="195" stroke="#0ff" stroke-width="2"/>
+  <polygon points="440,190 450,195 440,200" fill="#0ff"/>
+  <text x="418" y="187" fill="#088" font-size="7">calls</text>
+
+  <!-- TOOLS (right side) -->
+  <rect x="450" y="60" width="320" height="340" rx="10" fill="none" stroke="#ff0" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <text x="610" y="85" fill="#ff0" font-size="12" text-anchor="middle" font-weight="bold">TOOLS</text>
+
+  <!-- Tool: Terminal -->
+  <rect x="470" y="100" width="130" height="45" rx="6" fill="none" stroke="#0f0" stroke-width="1.5"/>
+  <text x="535" y="120" fill="#0f0" font-size="10" text-anchor="middle" font-weight="bold">Terminal</text>
+  <text x="535" y="135" fill="#0a0" font-size="8" text-anchor="middle">npm, git, build</text>
+
+  <!-- Tool: File System -->
+  <rect x="620" y="100" width="130" height="45" rx="6" fill="none" stroke="#0ff" stroke-width="1.5"/>
+  <text x="685" y="120" fill="#0ff" font-size="10" text-anchor="middle" font-weight="bold">File System</text>
+  <text x="685" y="135" fill="#088" font-size="8" text-anchor="middle">read, write, edit</text>
+
+  <!-- Tool: Browser -->
+  <rect x="470" y="160" width="130" height="45" rx="6" fill="none" stroke="#f80" stroke-width="1.5"/>
+  <text x="535" y="180" fill="#f80" font-size="10" text-anchor="middle" font-weight="bold">Browser</text>
+  <text x="535" y="195" fill="#a60" font-size="8" text-anchor="middle">test UI visually</text>
+
+  <!-- Tool: Git -->
+  <rect x="620" y="160" width="130" height="45" rx="6" fill="none" stroke="#f0f" stroke-width="1.5"/>
+  <text x="685" y="180" fill="#f0f" font-size="10" text-anchor="middle" font-weight="bold">Git</text>
+  <text x="685" y="195" fill="#a0a" font-size="8" text-anchor="middle">commit, push, PR</text>
+
+  <!-- Tool: Web Search -->
+  <rect x="470" y="220" width="130" height="45" rx="6" fill="none" stroke="#ff0" stroke-width="1.5"/>
+  <text x="535" y="240" fill="#ff0" font-size="10" text-anchor="middle" font-weight="bold">Web Search</text>
+  <text x="535" y="255" fill="#aa0" font-size="8" text-anchor="middle">docs, APIs, errors</text>
+
+  <!-- Tool: MCP -->
+  <rect x="620" y="220" width="130" height="45" rx="6" fill="none" stroke="#f00" stroke-width="1.5"/>
+  <text x="685" y="240" fill="#f00" font-size="10" text-anchor="middle" font-weight="bold">MCP Servers</text>
+  <text x="685" y="255" fill="#a00" font-size="8" text-anchor="middle">external APIs</text>
+
+  <!-- Result arrow back -->
+  <path d="M 450,310 L 300,310 L 300,270" fill="none" stroke="#0f0" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <polygon points="296,275 300,265 304,275" fill="#0f0" opacity="0.7"/>
+
+  <path d="M 205,270 L 90,270 L 90,230" fill="none" stroke="#0f0" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <polygon points="86,235 90,225 94,235" fill="#0f0" opacity="0.7"/>
+  <text x="140" y="290" fill="#0a0" font-size="7" opacity="0.7">result</text>
+
+  <!-- Bottom labels -->
+  <text x="400" y="390" fill="#0a0" font-size="9" text-anchor="middle">The agent autonomously selects tools, executes actions, and iterates</text>
+  <text x="400" y="405" fill="#060" font-size="8" text-anchor="middle">until the task is complete - no human intervention needed</text>
+</svg>
