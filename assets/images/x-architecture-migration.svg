@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Courier New', monospace">
+  <defs>
+    <filter id="gx"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="440" fill="#000" rx="8"/>
+  <text x="400" y="28" fill="#0f0" font-size="14" font-weight="bold" text-anchor="middle" filter="url(#gx)">X's RECOMMENDATION ENGINE: BEFORE vs AFTER</text>
+  <line x1="180" y1="38" x2="620" y2="38" stroke="#0f0" stroke-width="1" opacity="0.3"/>
+
+  <!-- OLD SYSTEM (left) -->
+  <rect x="20" y="50" width="370" height="370" rx="8" fill="none" stroke="#f80" stroke-width="1.5"/>
+  <text x="205" y="72" fill="#f80" font-size="12" text-anchor="middle" font-weight="bold">OLD: Scala/JVM (2023)</text>
+
+  <rect x="40" y="85" width="150" height="35" rx="4" fill="none" stroke="#ff0" stroke-width="1"/>
+  <text x="115" y="107" fill="#ff0" font-size="8" text-anchor="middle">Earlybird (in-network)</text>
+  <rect x="200" y="85" width="170" height="35" rx="4" fill="none" stroke="#ff0" stroke-width="1"/>
+  <text x="285" y="107" fill="#ff0" font-size="8" text-anchor="middle">SimClusters + TwHIN + UTEG</text>
+  <text x="205" y="80" fill="#aa0" font-size="7" text-anchor="middle">CANDIDATE SOURCING (~1500 tweets)</text>
+
+  <line x1="205" y1="120" x2="205" y2="133" stroke="#f80" stroke-width="1"/>
+  <polygon points="201,133 205,140 209,133" fill="#f80"/>
+
+  <rect x="80" y="142" width="250" height="32" rx="4" fill="none" stroke="#f80" stroke-width="1"/>
+  <text x="205" y="163" fill="#f80" font-size="9" text-anchor="middle">Light Ranker (logistic regression) ~400</text>
+
+  <line x1="205" y1="174" x2="205" y2="187" stroke="#f80" stroke-width="1"/>
+  <polygon points="201,187 205,194 209,187" fill="#f80"/>
+
+  <rect x="55" y="196" width="300" height="38" rx="4" fill="none" stroke="#f00" stroke-width="1.5"/>
+  <text x="205" y="213" fill="#f00" font-size="9" text-anchor="middle" font-weight="bold">Heavy Ranker: MaskNet (48M params)</text>
+  <text x="205" y="226" fill="#a00" font-size="7" text-anchor="middle">10+ engagement predictions, PyTorch</text>
+
+  <line x1="205" y1="234" x2="205" y2="247" stroke="#f80" stroke-width="1"/>
+  <polygon points="201,247 205,254 209,247" fill="#f80"/>
+
+  <rect x="55" y="256" width="300" height="38" rx="4" fill="none" stroke="#ff0" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="205" y="273" fill="#ff0" font-size="9" text-anchor="middle">Hand-coded Scala heuristics</text>
+  <text x="205" y="286" fill="#aa0" font-size="7" text-anchor="middle">1000s of lines of business logic</text>
+
+  <text x="55" y="315" fill="#f80" font-size="8">30+ separate models</text>
+  <text x="55" y="330" fill="#f80" font-size="8">220s CPU / request</text>
+  <text x="55" y="345" fill="#f80" font-size="8">Hand-engineered features</text>
+  <text x="55" y="360" fill="#f80" font-size="8">Multiple teams required</text>
+  <text x="55" y="380" fill="#f00" font-size="8">5B requests/day, &lt;1.5s latency</text>
+
+  <!-- Arrow -->
+  <line x1="390" y1="230" x2="408" y2="230" stroke="#0f0" stroke-width="2"/>
+  <polygon points="408,225 418,230 408,235" fill="#0f0"/>
+
+  <!-- NEW SYSTEM (right) -->
+  <rect x="420" y="50" width="360" height="370" rx="8" fill="none" stroke="#0f0" stroke-width="1.5"/>
+  <text x="600" y="72" fill="#0f0" font-size="12" text-anchor="middle" font-weight="bold">NEW: Rust + JAX/Haiku (2026)</text>
+
+  <rect x="440" y="85" width="150" height="35" rx="4" fill="none" stroke="#0ff" stroke-width="1"/>
+  <text x="515" y="100" fill="#0ff" font-size="8" text-anchor="middle">Thunder (Rust)</text>
+  <text x="515" y="112" fill="#088" font-size="7" text-anchor="middle">in-memory + Kafka</text>
+  <rect x="600" y="85" width="160" height="35" rx="4" fill="none" stroke="#0ff" stroke-width="1"/>
+  <text x="680" y="100" fill="#0ff" font-size="8" text-anchor="middle">Two-Tower Retrieval</text>
+  <text x="680" y="112" fill="#088" font-size="7" text-anchor="middle">user-post embeddings</text>
+
+  <line x1="600" y1="120" x2="600" y2="133" stroke="#0f0" stroke-width="1"/>
+  <polygon points="596,133 600,140 604,133" fill="#0f0"/>
+
+  <rect x="450" y="142" width="300" height="52" rx="6" fill="none" stroke="#0f0" stroke-width="2" filter="url(#gx)"/>
+  <rect x="450" y="142" width="300" height="52" rx="6" fill="rgba(0,255,0,0.06)"/>
+  <text x="600" y="163" fill="#0f0" font-size="11" text-anchor="middle" font-weight="bold">Phoenix: Grok Transformer</text>
+  <text x="600" y="178" fill="#0a0" font-size="8" text-anchor="middle">15 engagement actions, behavioral sequences</text>
+  <text x="600" y="189" fill="#060" font-size="7" text-anchor="middle">candidate isolation, no hand-engineered features</text>
+
+  <line x1="600" y1="194" x2="600" y2="207" stroke="#0f0" stroke-width="1"/>
+  <polygon points="596,207 600,214 604,207" fill="#0f0"/>
+
+  <rect x="460" y="216" width="130" height="25" rx="4" fill="none" stroke="#0a0" stroke-width="1"/>
+  <text x="525" y="233" fill="#0a0" font-size="7" text-anchor="middle">Weighted Scorer</text>
+  <rect x="600" y="216" width="140" height="25" rx="4" fill="none" stroke="#0a0" stroke-width="1"/>
+  <text x="670" y="233" fill="#0a0" font-size="7" text-anchor="middle">Diversity + OON Scorer</text>
+
+  <text x="445" y="270" fill="#0f0" font-size="8">Single unified model</text>
+  <text x="445" y="285" fill="#0f0" font-size="8">&lt;200ms inference</text>
+  <text x="445" y="300" fill="#0f0" font-size="8">Zero hand-engineered features</text>
+  <text x="445" y="315" fill="#0f0" font-size="8">Learns from behavioral data</text>
+  <text x="445" y="335" fill="#0f0" font-size="8" font-weight="bold">Rust orchestration + Python ML</text>
+
+  <!-- Bottom quote -->
+  <text x="400" y="420" fill="#0a0" font-size="8" text-anchor="middle" font-style="italic">"We have eliminated every single hand-engineered feature and most heuristics from the system."</text>
+</svg>
